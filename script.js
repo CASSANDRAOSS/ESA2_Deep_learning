@@ -559,6 +559,18 @@ function showAccordion() {
     acc.scrollIntoView({ behavior: "smooth" });
 }
 
+// Modell speichern
+async function saveMyModel(model, name) {
+    await model.save(`localstorage://${name}`);
+    console.log(`Modell ${name} im LocalStorage gespeichert`);
+}
+
+// Modell laden
+async function loadMyModel(name) {
+    const model = await tf.loadLayersModel(`localstorage://${name}`);
+    return model;
+}
+
 
 
 
