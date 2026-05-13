@@ -99,11 +99,19 @@
                     <span>A2 & R2 – Modell ohne Rauschen</span>
                     <span class="arrow">▸</span>
                 </button>
+
+                
                 <div class="accordion-content">
+                    <div id="loading-clean" class="loading-box">
+                        Modell wird geladen und trainiert....
+                    </div>
+                    
                     <div class="plot-row">
                         <div id="plot-clean-train" class="plot"></div>
                         <div id="plot-clean-test" class="plot"></div>
                     </div>
+
+                    <div id="loss-clean-plot" class="loss-plot"></div>
                     <div id="loss-clean"></div>
                 </div>
             </div>
@@ -114,11 +122,18 @@
                     <span class="arrow">▸</span>
                 </button>
                 <div class="accordion-content">
+                    <div id="loading-best" class="loading-box">
+                        Best-Fit-Modell wird geladen und trainiert ...
+                    </div>
+                    
                     <div class="plot-row">
                         <div id="plot-best-train" class="plot"></div>
                         <div id="plot-best-test" class="plot"></div>
                     </div>
+                    
+                    <div id="loss-best-plot" class="loss-plot"></div>
                     <div id="loss-best"></div>
+                    
                 </div>
             </div>
 
@@ -128,10 +143,15 @@
                     <span class="arrow">▸</span>
                 </button>
                 <div class="accordion-content">
+                    <div id="loading-overfit" class="loading-box">
+                        Overfit-Modell wird geladen und trainiert ...
+                    </div>
                     <div class="plot-row">
                         <div id="plot-overfit-train" class="plot"></div>
                         <div id="plot-overfit-test" class="plot"></div>
                     </div>
+
+                    <div id="loss-overfit-plot" class="loss-plot"></div>
                     <div id="loss-overfit"></div>
                 </div>
             </div>
@@ -185,7 +205,9 @@
                     <ul>
                         <li>Alle Daten werden dynamisch erzeugt und somit keine statischen Dateien.</li>
                         <li>Die Modelle werden vollständig clientseitig trainiert.</li>
-                        <li>Loss‑Werte werden automatisch berechnet und unter den Diagrammen angezeigt.</li>
+                        <li>Während des Trainings erscheint ein Ladehinweis, der nach Abschluss des jeweiligen Modells automatisch ausgeblendet wird.</li>
+                        <li>Loss-Werte werden automatisch berechnet und unter den Diagrammen angezeigt. Zusätzlich wird der Trainingsverlauf als Loss-Kurve visualisiert.</li>
+                        <li>Für den Entwicklungszyklus wurden Funktionen zum Speichern und Laden von Modellen implementiert. In der finalen Abgabe bleiben diese bewusst im Hintergrund, da die Modelle und Datensätze beim Laden der Seite automatisch erzeugt, trainiert und visualisiert werden.</li>
                         <li>Die Inhalte sind in Sektionen und Akkordeons organisiert, um Übersichtlichkeit zu gewährleisten.</li>
                     </ul>
 
@@ -226,23 +248,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>Projekt-PDF herunterladen</span>
-                    <span class="arrow">▸</span>
-                </button>
-            <div class="accordion-content">
-                <p>
-                    Das vollständige Dokument "Regression mit Neuronalen Netzen
-                    Einfach erklärt" kann hier heruntergeladen werden:
-                </p>
-                <a href="assets/Protokoll_deep_Learning.pdf" download>
-                    <button style="padding:10px 20px; font-size:16px; background-color:#4a90e2; color:white; border:none; border-radius:6px; cursor:pointer;">
-                PDF herunterladen
-                    </button>
-                </a>
-            </div>
-            </div>
+            
 
         </div>
     </div>
